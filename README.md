@@ -16,12 +16,14 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [x] (3pts) User can view the movie poster image for each movie.
 
 #### BONUS
-- [ ] (2pt) User can view the app on various device sizes and orientations.
-- [] (1pt) Run your app on a real device.
+- [x] (2pt) User can view the app on various device sizes and orientations.
+- [ ] (1pt) Run your app on a real device.
 
 ### App Walkthrough GIF
 
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src="./Flix.gif" width=250><br>
 
 ### Notes
 Describe any challenges encountered while building the app.
+- Autolayout was tricky at first but after getting a hang of it, pinning constraints became somewhat intuitive. I realized that views should be position with constraints in the first place, rather than dragging them.
+- Finding a cable that connects to my iPhone to my macbook was unnecessarily hard :(
