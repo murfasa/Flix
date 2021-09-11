@@ -17,11 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GcD-69-Ws7" userLabel="BlackView">
-                                <rect key="frame" x="105" y="346" width="204" height="204"/>
+                                <rect key="frame" x="102" y="343" width="210" height="210"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BoQ-b8-hyN" userLabel="BgView">
-                                        <rect key="frame" x="2" y="2" width="200" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoQ-b8-hyN" userLabel="BgView">
+                                        <rect key="frame" x="5" y="5" width="200" height="200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="JW5-WS-hiR">
                                                 <rect key="frame" x="43" y="17" width="114" height="114"/>
@@ -38,20 +37,26 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="bCA-kY-HBO"/>
+                                            <constraint firstAttribute="width" constant="200" id="mel-6p-Z78"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="204" id="UI0-cG-3jg"/>
-                                    <constraint firstAttribute="width" constant="204" id="kCW-Jg-G2b"/>
+                                    <constraint firstItem="BoQ-b8-hyN" firstAttribute="top" secondItem="GcD-69-Ws7" secondAttribute="top" constant="5" id="Oxl-1k-X1Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="BoQ-b8-hyN" secondAttribute="bottom" constant="5" id="doj-vn-MdG"/>
+                                    <constraint firstItem="BoQ-b8-hyN" firstAttribute="leading" secondItem="GcD-69-Ws7" secondAttribute="leading" constant="5" id="eXd-sR-iTf"/>
+                                    <constraint firstAttribute="trailing" secondItem="BoQ-b8-hyN" secondAttribute="trailing" constant="5" id="u0t-4j-oFM"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.43599426749999998" green="0.70957225560000003" blue="0.9019884467" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="GcD-69-Ws7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="95k-TA-0KP"/>
-                            <constraint firstItem="GcD-69-Ws7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xr4-ZS-I2h"/>
+                            <constraint firstItem="GcD-69-Ws7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="K8n-Up-USn"/>
+                            <constraint firstItem="GcD-69-Ws7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rbw-2R-2gs"/>
                         </constraints>
                     </view>
                 </viewController>
