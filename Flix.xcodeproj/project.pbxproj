@@ -20,6 +20,7 @@
 		6CEF845B26F4A6140068C561 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF845A26F4A6140068C561 /* MovieDetailsViewController.swift */; };
 		6CEF845D26F68A230068C561 /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF845C26F68A230068C561 /* MovieGridViewController.swift */; };
 		6CEF845F26F6D0B60068C561 /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF845E26F6D0B60068C561 /* MovieGridCell.swift */; };
+		6CEF846126F6F7890068C561 /* MovieTrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF846026F6F7890068C561 /* MovieTrailerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		6CEF845A26F4A6140068C561 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		6CEF845C26F68A230068C561 /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
 		6CEF845E26F6D0B60068C561 /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
+		6CEF846026F6F7890068C561 /* MovieTrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				6CEF845C26F68A230068C561 /* MovieGridViewController.swift */,
 				6CEF845E26F6D0B60068C561 /* MovieGridCell.swift */,
 				6CEF845A26F4A6140068C561 /* MovieDetailsViewController.swift */,
+				6CEF846026F6F7890068C561 /* MovieTrailerViewController.swift */,
 				6CC3705926DDC1B300A2606A /* Assets.xcassets */,
 				6CC3705B26DDC1B300A2606A /* LaunchScreen.storyboard */,
 				6CC3705E26DDC1B300A2606A /* Info.plist */,
@@ -280,6 +283,7 @@
 			files = (
 				6CEF845B26F4A6140068C561 /* MovieDetailsViewController.swift in Sources */,
 				6CC3705126DDC1B000A2606A /* AppDelegate.swift in Sources */,
+				6CEF846126F6F7890068C561 /* MovieTrailerViewController.swift in Sources */,
 				6CC3705326DDC1B000A2606A /* SceneDelegate.swift in Sources */,
 				6CBDB41526E09B970034FFA4 /* MovieCell.swift in Sources */,
 				6CC3708126DDC95400A2606A /* MoviesViewController.swift in Sources */,

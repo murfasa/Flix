@@ -122,13 +122,17 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="skf-cu-cQL">
                                 <rect key="frame" x="0.0" y="88" width="390" height="300"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="mdT-4X-0pP"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5Xu-Vx-dzm" appends="YES" id="j6o-jL-shr"/>
+                                </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pI-lD-lLv">
-                                <rect key="frame" x="129" y="401" width="73" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="0pI-lD-lLv">
+                                <rect key="frame" x="129" y="401" width="75.333333333333314" height="37"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -143,10 +147,14 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-ed-6Uu">
                                         <rect key="frame" x="4" y="4" width="90" height="135"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="Qcu-Jz-9dm"/>
                                             <constraint firstAttribute="height" constant="135" id="mbq-ir-dwY"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="4eb-DW-h3F" appends="YES" id="Zq8-W6-o9G"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.34659817809999999" green="0.71307992939999998" blue="0.92159861330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -161,12 +169,13 @@
                         <viewLayoutGuide key="safeArea" id="wSR-fR-zaI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="0pI-lD-lLv" secondAttribute="trailing" constant="172" id="BjU-hA-6ch"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="0pI-lD-lLv" secondAttribute="trailing" id="BjU-hA-6ch"/>
                             <constraint firstItem="wSR-fR-zaI" firstAttribute="trailing" secondItem="Gyi-zV-I5k" secondAttribute="trailing" constant="15" id="EY8-iH-L4F"/>
                             <constraint firstItem="skf-cu-cQL" firstAttribute="top" secondItem="wSR-fR-zaI" secondAttribute="top" id="Pq9-v9-ukQ"/>
                             <constraint firstItem="0pI-lD-lLv" firstAttribute="leading" secondItem="5ez-zT-CGu" secondAttribute="trailing" constant="15" id="Yn7-Hs-Yno"/>
                             <constraint firstItem="Gyi-zV-I5k" firstAttribute="top" secondItem="5ez-zT-CGu" secondAttribute="bottom" constant="15" id="kKD-Gf-9q4"/>
                             <constraint firstItem="5ez-zT-CGu" firstAttribute="top" secondItem="skf-cu-cQL" secondAttribute="bottom" constant="-85" id="mRE-Ww-uxc"/>
+                            <constraint firstItem="Gyi-zV-I5k" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0pI-lD-lLv" secondAttribute="bottom" constant="15" id="pwO-1b-dyZ"/>
                             <constraint firstItem="Gyi-zV-I5k" firstAttribute="leading" secondItem="Wgx-aK-JSu" secondAttribute="leadingMargin" id="vNU-63-Rro"/>
                             <constraint firstItem="skf-cu-cQL" firstAttribute="leading" secondItem="wSR-fR-zaI" secondAttribute="leading" id="x3j-na-tgN"/>
                             <constraint firstItem="0pI-lD-lLv" firstAttribute="top" secondItem="skf-cu-cQL" secondAttribute="bottom" constant="13" id="xO9-2S-Hmi"/>
@@ -183,8 +192,49 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ix-h6-bhT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5Xu-Vx-dzm">
+                    <connections>
+                        <segue destination="OTg-j5-MA2" kind="presentation" id="FWq-vP-t0W"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="4eb-DW-h3F">
+                    <connections>
+                        <segue destination="OTg-j5-MA2" kind="presentation" id="aB0-Hi-utB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="17" y="1569"/>
+            <point key="canvasLocation" x="594" y="1580"/>
+        </scene>
+        <!--Movie Trailer View Controller-->
+        <scene sceneID="CU0-Lx-gS3">
+            <objects>
+                <viewController id="OTg-j5-MA2" customClass="MovieTrailerViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jov-Fg-zC2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Er8-TD-LWd">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dhw-AY-jov"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Er8-TD-LWd" firstAttribute="top" secondItem="Jov-Fg-zC2" secondAttribute="top" id="6v3-v7-UQu"/>
+                            <constraint firstAttribute="trailing" secondItem="Er8-TD-LWd" secondAttribute="trailing" id="8KN-0E-tVe"/>
+                            <constraint firstAttribute="bottom" secondItem="Er8-TD-LWd" secondAttribute="bottom" id="JUg-KB-4q3"/>
+                            <constraint firstItem="Er8-TD-LWd" firstAttribute="leading" secondItem="Jov-Fg-zC2" secondAttribute="leading" id="qrn-Ad-fNl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QvJ-ls-b0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="1580"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="97o-1B-FbT">
@@ -262,6 +312,7 @@
                                         <size key="customSize" width="177" height="266"/>
                                         <connections>
                                             <outlet property="posterView" destination="Ojd-iu-IDz" id="1Go-2a-kLE"/>
+                                            <segue destination="i7E-FG-Jft" kind="show" id="2Ci-mX-d9c"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -310,6 +361,10 @@
             <point key="canvasLocation" x="1177" y="88"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FWq-vP-t0W"/>
+        <segue reference="2Ci-mX-d9c"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="superhero_tabbar_item" width="21" height="23"/>
         <image name="video" catalog="system" width="128" height="83"/>
