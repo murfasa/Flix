@@ -43,10 +43,10 @@ class MovieDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let movieId = movie["id"] as! Int
+        let movieId = movie["id"]
         
         let trailerViewController = segue.destination as! MovieTrailerViewController
-        trailerViewController.movieId = movieId
+        trailerViewController.movieId = movieId as? Int
     }
 
 }

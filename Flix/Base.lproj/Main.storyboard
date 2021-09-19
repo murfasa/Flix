@@ -120,7 +120,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="skf-cu-cQL">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="skf-cu-cQL">
                                 <rect key="frame" x="0.0" y="88" width="390" height="300"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -145,7 +145,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ez-zT-CGu" userLabel="Poster Border View">
                                 <rect key="frame" x="16" y="303" width="98" height="143"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-ed-6Uu">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-ed-6Uu">
                                         <rect key="frame" x="4" y="4" width="90" height="135"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -362,7 +362,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FWq-vP-t0W"/>
+        <segue reference="aB0-Hi-utB"/>
         <segue reference="2Ci-mX-d9c"/>
     </inferredMetricsTieBreakers>
     <resources>

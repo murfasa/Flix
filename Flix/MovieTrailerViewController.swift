@@ -10,7 +10,7 @@ import WebKit
 
 class MovieTrailerViewController: UIViewController, WKUIDelegate {
 
-    var movieId: Int!
+    var movieId : Int!
     
     var movieTrailers = [[String:Any]]()
     
@@ -25,13 +25,11 @@ class MovieTrailerViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=70d8429f9ce4fb073b70b18d7a617875
-        // https://www.youtube.com/watch?v= + key
         
         // Do any additional setup after loading the view.
-        
-        let url = URL(string: "https://api.themoviedb.org/3/movie/" + String(movieId!) + "/videos?api_key=70d8429f9ce4fb073b70b18d7a617875")!
+
+        let notUrl = "https://api.themoviedb.org/3/movie/" + String(movieId) + "/videos?api_key=70d8429f9ce4fb073b70b18d7a617875"
+        let url = URL(string: notUrl)!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -40,20 +38,20 @@ class MovieTrailerViewController: UIViewController, WKUIDelegate {
                     print(error.localizedDescription)
              } else if let data = data {
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                    
-                self.movieTrailers = dataDictionary["results"] as! [[String:Any]]
                 
-               // self.webView.reload()
-                    // TODO: Get the array of movies
-                    // TODO: Store the movies in a property to use elsewhere
-                    // TODO: Reload your table view data
-
+                self.movieTrailers = dataDictionary["results"] as! [[String:Any]]
+                self.loadVideo()
              }
         }
         task.resume()
-        
-        let key = movieTrailers[1]["key"] as! String
-        let videoURL = URL(string: "https://www.youtube.com/watch?v=" + key)
+    }
+    
+    func loadVideo() {
+        // https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=70d8429f9ce4fb073b70b18d7a617875
+        // https://www.youtube.com/watch?v= + key
+        let video = movieTrailers[0]
+        let key = video["key"] as! String
+        let videoURL = URL(string: "https://www.youtube.com/watch?v=\(key)")
         let videoRequest = URLRequest(url: videoURL!)
         webView.load(videoRequest)
     }
